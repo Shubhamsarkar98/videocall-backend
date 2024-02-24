@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
     res.send('shubham')
 })
 
+app.post('/login', (req, res) => {
+    req.body='username'
+})
+
 server.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
