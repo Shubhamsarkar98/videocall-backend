@@ -19,9 +19,14 @@ io.on("connection", (socket) => {
         io.emit("chat message", msg);
     });
 });
-app.get('/', (req, res) => {
-    res.send('shubham')
-})
+app.post('/api/posts', (req, res) => {
+    // You can access the POST data from req.body
+    const postData = req.body;
+    console.log('Received data:', postData);
+  
+    // Respond with a success message
+    res.status(200).send('Post received successfully');
+  });
 
 app.post('/login', (req, res) => {
     req.body='username'
