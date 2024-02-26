@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 const app = express();
 import cors from 'cors'
 dotenv.config()
-const port = process.env.port
+const port = process.env.Port
 app.use(cors())
 const data=[
     {
