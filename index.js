@@ -10,9 +10,9 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
-(async () => {
+;(async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL, { dbName: 'admin', });
+    await mongoose.connect(process.env.MONGO_URL, { dbName: 'admin'});
     console.log("MongoDB connected");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
