@@ -1,2 +1,2 @@
+export const common="das"
 
-export{common}
