@@ -9,3 +9,8 @@ export const asyncHandler = (fn) => async (req, res, next) => {
     }
 }
 
+export const apiHandler=(api)=>{
+    (req,res,next)=>{
+        Promise.resolve(api(req,res,next)).catch((err)=>next(err))
+    }
+}
