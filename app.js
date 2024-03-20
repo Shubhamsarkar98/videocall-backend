@@ -7,6 +7,7 @@ app.use(cors({
     origin: process.env.CORS_Origin,
     credentials: true
 }))
+console.log(app)
 //app json
 app.use(express.json({ limit: "16kb" }))
 app.use(express.urlencoded({ extended }))
